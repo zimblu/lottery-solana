@@ -1,5 +1,5 @@
-import style from "../styles/TableRow.module.css";
-import { shortenPk } from "../utils/helper";
+import style from "../styles/TableRow.module.css"
+import { shortenPk } from "../utils/helper"
 
 const TableRow = ({
   lotteryId,
@@ -14,7 +14,7 @@ const TableRow = ({
       <div>#{winnerId}</div>
       <div>+{prize} SOL</div>
     </div>
-  );
-};
+  )
+}
 
-export default TableRow;
+export default TableRow

@@ -10,6 +10,6 @@ pub enum LotteryError {
     WinnerNotChosen,
     #[msg("Invalid winner.")]
     InvalidWinner,
-    #[msg("The prize has already been claimed")]
+    #[msg("The prize has already been claimed.")]
     AlreadyClaimed,
 }

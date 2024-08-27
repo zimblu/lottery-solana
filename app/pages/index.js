@@ -11,6 +11,7 @@ import {
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets"
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui"
 require("@solana/wallet-adapter-react-ui/styles.css")
+import { AppProvider } from "../context/context"
 
 export default function Home() {
   const endpoint =
@@ -21,13 +22,13 @@ export default function Home() {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-          {/* <AppProvider> */}
-          <div className={style.wrapper}>
-            <Header />
-            <PotCard />
-            <Table />
-          </div>
-          {/* </AppProvider> */}
+          <AppProvider>
+            <div className={style.wrapper}>
+              <Header />
+              <PotCard />
+              <Table />
+            </div>
+          </AppProvider>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
